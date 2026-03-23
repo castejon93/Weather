@@ -161,7 +161,7 @@ describe('WeatherApp', () => {
 
       await waitFor(() => {
         expect(mockedAxios.get).toHaveBeenCalledWith(
-          'https://api.openweathermap.org/data/2.5/weather',
+          process.env.NEXT_PUBLIC_OPENWEATHER_API_URL || '',
           {
             params: {
               q: 'London',

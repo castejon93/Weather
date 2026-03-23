@@ -49,7 +49,7 @@ export default function WeatherApp({ apiKey = process.env.NEXT_PUBLIC_OPENWEATHE
     try {
       // Call OpenWeatherMap API with city name and API key
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather`,
+        process.env.NEXT_PUBLIC_OPENWEATHER_API_URL || '',
         {
           params: {
             q: city.trim(),
