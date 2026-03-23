@@ -8,13 +8,13 @@ import './index.css';
 
 // Type definition for weather data returned from API
 export interface WeatherData {
-  city: string;              
-  temperature: number;      
-  humidity: number;          
-  description: string;       
-  icon: string;              
-  feelsLike: number;         
-  windSpeed: number;         
+  city: string;
+  temperature: number;
+  humidity: number;
+  description: string;
+  icon: string;
+  feelsLike: number;
+  windSpeed: number;
 }
 
 // Props interface for the WeatherApp component
@@ -23,7 +23,7 @@ interface WeatherAppProps {
 }
 
 // Main WeatherApp component that fetches and displays weather information
-export default function WeatherApp({ apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY || ''}: WeatherAppProps) {
+export default function WeatherApp({ apiKey = process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY || '' }: WeatherAppProps) {
   // State: user input for city name
   const [city, setCity] = useState('');
   // State: fetched weather data
@@ -52,9 +52,9 @@ export default function WeatherApp({ apiKey = process.env.NEXT_PUBLIC_OPENWEATHE
         `https://api.openweathermap.org/data/2.5/weather`,
         {
           params: {
-            q: city.trim(),      
-            appid: apiKey,        
-            units: 'metric',      
+            q: city.trim(),
+            appid: apiKey,
+            units: 'metric',
           },
         }
       );

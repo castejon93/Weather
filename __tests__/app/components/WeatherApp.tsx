@@ -1,6 +1,3 @@
-/// <reference types="jest" />
-// Jest testing framework for async/await and mocking
-
 // Import testing utilities from React Testing Library
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 // Import user interaction simulator
